@@ -7,28 +7,11 @@ from pgl import *
 #1a
 def create_histogram_array(data:list[int])->list[int]:
     counts = [0] * 10
+    
     for value in data:
-        if value == 0:
-            counts[0]+=1
-        elif value == 1:
-            counts[1]+=1
-        elif value == 2:
-            counts[2]+=1
-        elif value == 3:
-            counts[3]+=1
-        elif value == 4:
-            counts[4]+=1
-        elif value == 5:
-            counts[5]+=1
-        elif value == 6:
-            counts[6]+=1
-        elif value == 7:
-            counts[7]+=1
-        elif value == 8:
-            counts[8]+=1
-        elif value == 9:
-            counts[9]+=1
-        
+        for i in range(len(data)):
+            if value == i:
+                counts[value]+=1
     return counts
     pass
 
